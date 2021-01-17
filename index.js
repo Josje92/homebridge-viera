@@ -46,11 +46,11 @@ VIERA.prototype.getServices = function() {
 
   this.tvService.addLinkedService(this.televisionSpeakerService);
 
-  this.volumeUpService = this.createStatelessSwitchService(this.name + ' Volume Up', 'volumeUpService', this.setVolumeUp.bind(this));
+  this.volumeUpService = this.createStatelessSwitchService('1) Volume Up', 'volumeUpService', this.setVolumeUp.bind(this));
 
-  this.muteService = this.createStatelessSwitchService(this.name + ' Mute', 'muteService', this.setMute.bind(this));
+  this.muteService = this.createStatelessSwitchService('3) Mute', 'muteService', this.setMute.bind(this));
 
-  this.volumeDownService = this.createStatelessSwitchService(this.name + ' Volume Down', 'volumeDownService', this.setVolumeDown.bind(this));
+  this.volumeDownService = this.createStatelessSwitchService('2) Volume Down', 'volumeDownService', this.setVolumeDown.bind(this));
 
 
   return [this.tvService, this.televisionSpeakerService, this.informationService, this.volumeUpService, this.muteService, this.volumeDownService];
